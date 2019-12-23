@@ -1,13 +1,24 @@
-ipCheck = function(){
-    let ipv6info;
-    let ipv4info;
-    $.getJSON('https://ip6.seeip.org/geoip', function(data){
-        ipv6info=data;
-    }).then(data=>{
-        $.getJSON('https://ip4.seeip.org/geoip', function(data){
-            ipv4info=data;
-        }).then(data=>{
-                return(console.log([ipv4info,ipv6info]));
-            });
+ipCheck = {
+    ipv6 : function(){
+        $.ajax({ 
+            url: 'https://ip6.seeip.org/geoip', 
+            dataType: 'json', 
+            data: data, 
+            async: false, 
+            success: function(json){
+                return ipv6;
+            }
         });
+    },
+    ipv4 : function(){
+        $.ajax({ 
+            url: 'https://ip4.seeip.org/geoip', 
+            dataType: 'json', 
+            data: data, 
+            async: false, 
+            success: function(json){
+                return ipv6;
+            }
+        });
+    }
 }

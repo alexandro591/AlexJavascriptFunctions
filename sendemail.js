@@ -10,7 +10,6 @@ EmailTools = {
 			Subject : subject,
 			Body : body
 		}).then(
-
 			message => {
 				if(confirmation){
 					if(message=="OK"){
