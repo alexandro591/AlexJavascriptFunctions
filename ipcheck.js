@@ -1,26 +1,30 @@
 IpCheck = {
     ipv6 : function(){
-        $.ajax({ 
+        $.ajax({
             url: 'https://ip6.seeip.org/geoip', 
             dataType: 'json',
+            async: true,
             success: function(json){
-                return JSON.stringify(json);
+                result = JSON.stringify(json);
             },
             error: function () {
-                return "No ipv6 found";
+                result = "No ipv6 found";
             }
         });
+        return result;
     },
     ipv4 : function(){
-        $.ajax({ 
+        $.ajax({
             url: 'https://ip4.seeip.org/geoip', 
             dataType: 'json',
+            async: true,
             success: function(json){
-                return JSON.stringify(json);
+                result = JSON.stringify(json);
             },
             error: function () {
-                return "No ipv4 found";
+                result = "No ipv4 found";
             }
         });
+        return result;
     }
 }
