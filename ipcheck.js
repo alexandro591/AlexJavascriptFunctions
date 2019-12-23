@@ -5,10 +5,10 @@ IpCheck = {
             dataType: 'json',
             async: false,
             success: function(json){
-                result = JSON.stringify(json);
+                result = json;
             },
             error: function () {
-                result = "No ipv6 found";
+                result = JSON.parse('{ "address":"not found"}');
             }
         });
         return result;
@@ -19,10 +19,10 @@ IpCheck = {
             dataType: 'json',
             async: false,
             success: function(json){
-                result = JSON.stringify(json);
+                result = json;
             },
             error: function () {
-                result = "No ipv4 found";
+                result = JSON.parse('{ "address":"not found"}');
             }
         });
         return result;
