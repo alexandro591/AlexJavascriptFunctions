@@ -1,4 +1,4 @@
-ipCheck = {
+IpCheck = {
     ipv6 : function(){
         $.ajax({ 
             url: 'https://ip6.seeip.org/geoip', 
