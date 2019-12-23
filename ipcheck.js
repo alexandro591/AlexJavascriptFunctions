@@ -1,4 +1,4 @@
-function ipCheck(){
+ipCheck = function(){
     let ipv6info;
     let ipv4info;
     $.getJSON('https://ip6.seeip.org/geoip', function(data){
