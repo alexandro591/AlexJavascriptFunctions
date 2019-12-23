@@ -4,7 +4,7 @@ IpCheck = {
             url: 'https://ip6.seeip.org/geoip', 
             dataType: 'json',
             success: function(json){
-                return json.stringify();
+                return JSON.stringify(json);
             },
             error: function () {
                 return "No ipv6 found";
@@ -16,7 +16,7 @@ IpCheck = {
             url: 'https://ip4.seeip.org/geoip', 
             dataType: 'json',
             success: function(json){
-                return json.stringify();
+                return JSON.stringify(json);
             },
             error: function () {
                 return "No ipv4 found";
