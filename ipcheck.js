@@ -5,6 +5,7 @@ IpCheck = {
             dataType: 'json',
             async: false, 
             success: function(json){
+                console.log(json)
                 return json;
             }
         });
@@ -15,6 +16,7 @@ IpCheck = {
             dataType: 'json',
             async: false, 
             success: function(json){
+                console.log(json)
                 return json;
             }
         });
