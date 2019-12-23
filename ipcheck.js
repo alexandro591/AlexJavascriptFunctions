@@ -3,10 +3,11 @@ IpCheck = {
         $.ajax({ 
             url: 'https://ip6.seeip.org/geoip', 
             dataType: 'json',
-            async: false, 
             success: function(json){
-                console.log(json)
-                return json;
+                return json.stringify();
+            },
+            error: function () {
+                return "No ipv6 found";
             }
         });
     },
@@ -14,10 +15,11 @@ IpCheck = {
         $.ajax({ 
             url: 'https://ip4.seeip.org/geoip', 
             dataType: 'json',
-            async: false, 
             success: function(json){
-                console.log(json)
-                return json;
+                return json.stringify();
+            },
+            error: function () {
+                return "No ipv4 found";
             }
         });
     }
