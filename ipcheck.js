@@ -7,8 +7,7 @@ ipCheck = function(){
         $.getJSON('https://ip4.seeip.org/geoip', function(data){
             ipv4info=data;
         }).then(data=>{
-                console.log([ipv4info,ipv6info]);
-                return [ipv4info,ipv6info];
+                return(console.log([ipv4info,ipv6info]));
             });
         });
 }
