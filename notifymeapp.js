@@ -16,7 +16,7 @@ NotifyMeApp = {
 			SecureToken : "b4040953-8b2f-4764-a8ce-4e3750540874",
 			To : to,
 			From : "notifymelocalhost@gmail.com",
-			Subject : "NotifyMeApp has sent you a message",
+			Subject : "Notification from NotifyMeApp",
 			Body : body
 		}).then(
 			message => {
