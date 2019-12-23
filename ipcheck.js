@@ -2,22 +2,20 @@ IpCheck = {
     ipv6 : function(){
         $.ajax({ 
             url: 'https://ip6.seeip.org/geoip', 
-            dataType: 'json', 
-            data: data, 
+            dataType: 'json',
             async: false, 
             success: function(json){
-                return ipv6;
+                return json;
             }
         });
     },
     ipv4 : function(){
         $.ajax({ 
             url: 'https://ip4.seeip.org/geoip', 
-            dataType: 'json', 
-            data: data, 
+            dataType: 'json',
             async: false, 
             success: function(json){
-                return ipv6;
+                return json;
             }
         });
     }
