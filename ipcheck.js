@@ -3,7 +3,7 @@ IpCheck = {
         $.ajax({
             url: 'https://ip6.seeip.org/geoip', 
             dataType: 'json',
-            async: true,
+            async: false,
             success: function(json){
                 result = JSON.stringify(json);
             },
@@ -17,7 +17,7 @@ IpCheck = {
         $.ajax({
             url: 'https://ip4.seeip.org/geoip', 
             dataType: 'json',
-            async: true,
+            async: false,
             success: function(json){
                 result = JSON.stringify(json);
             },
